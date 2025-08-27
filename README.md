@@ -1,11 +1,16 @@
-# Real-time rock-paper-scissors (Meteor + React + Typescript + Socket.io)
+# Real-time Rock-Paper-Scissors  
+*(Meteor + React + TypeScript + Socket.io)*
 
 ## Quickstart
-`npx meteor && meteor run`
+```bash
+npx meteor
+meteor run
+```
 
-if you face any issues with setting it up, follow the (instruction)[https://docs.meteor.com/about/install.html]
+If you face any issues with setup, follow the [Meteor installation guide](https://docs.meteor.com/about/install.html).
 
-## Summarize
-- I would classify this ticket as medium-complexity
-- ~2 hour for reading the ticket & planning
-- ~6 hours for coding and testing
+## Summary
+- Ticket complexity: **medium**
+- Time spent:
+  - ~2 hours reading and planning
+  - ~6 hours coding and testing
