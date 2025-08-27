@@ -22,8 +22,8 @@ export const useGameController = () => {
   );
 
   const startNewRound = useCallback(() => {
-    setRoundResult(() => null);
-    setUserChoice(() => null);
+    setRoundResult(null);
+    setUserChoice(null);
 
     if (!socket || !roundResult) return;
     socket.emit(SocketAction.NewRound, roundResult.opponentUserId);
@@ -34,10 +34,10 @@ export const useGameController = () => {
 
     // On game activity
     socket.on(SocketAction.GameActivity, (activity: boolean) => {
-      setGameActivity(() => activity);
+      setGameActivity(activity);
       if (!activity) {
-        setRoundResult(() => null);
-        setUserChoice(() => null);
+        setRoundResult(null);
+        setUserChoice(null);
       }
     });
 
@@ -48,8 +48,8 @@ export const useGameController = () => {
 
     // On new round
     socket.on(SocketAction.NewRound, () => {
-      setRoundResult(() => null);
-      setUserChoice(() => null);
+      setRoundResult(null);
+      setUserChoice(null);
     });
 
     return () => {

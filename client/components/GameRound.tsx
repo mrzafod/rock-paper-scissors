@@ -2,8 +2,8 @@ import React, { useCallback } from 'react';
 import { GameUserChoice } from '../../imports/types/game.types';
 import { useGameController } from '../hooks/useGameController';
 import ChoicesForm from './ChoicesForm';
-import { WaitingScreen } from './WaitingScreen';
 import RoundResult from './RoundResult';
+import { WaitingScreen } from './WaitingScreen';
 
 const GameRound: React.FC = () => {
   const {
@@ -25,6 +25,9 @@ const GameRound: React.FC = () => {
     startNewRound();
   }, [startNewRound]);
 
+  // @WARNING!
+  // It might be better to use state machine for
+  // conditional transition between round states
   const isWaitingScreen = !gameActivity;
   const isChoiceForm = gameActivity && !roundResult;
   const isResultScreen = gameActivity && !!roundResult;

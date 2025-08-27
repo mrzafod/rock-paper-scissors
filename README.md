@@ -4,6 +4,7 @@
 ## Quickstart
 ```bash
 npx meteor
+meteor npm i
 meteor run
 ```
 
